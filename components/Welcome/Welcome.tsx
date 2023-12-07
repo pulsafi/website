@@ -74,13 +74,13 @@ const carouselItems = [
     icon: 'step1-icon',
     title: 'Access PulsaFi via Mobile App or Website',
     caption:
-      'Our application will be identical across all iOS, Android, and MAC devices, as well as any web browser.',
+      'Our application will be identical across all iOS, Android, and Mac devices, as well as any web browser.',
   },
   {
     icon: 'step2-icon',
     title: 'Link Bank Account',
     caption:
-      'In order for PulsaFi to generate a credit-worthiness score, at least one account must be linked. Users may link as many accounts as they would like.',
+      'In order for PulsaFi to generate a creditworthiness score, at least one account must be linked. You may link as many accounts as you would like.',
   },
   {
     icon: 'step3-icon',
@@ -229,10 +229,12 @@ export function Welcome() {
 
                   <Text className={classes.cardTitle}>Justin Gukhyun Cho, Ph.D.</Text>
                   <Text className={classes.cardSubtitle}>Advisor</Text>
-                  <Text className={classes.bodyItalic}></Text>
+                  <Text className={classes.bodyItalic}>
+                    Professor Emeritus, Business Administration. Hawaii Pacific University, Honolulu
+                  </Text>
                   <Text className={classes.body}>
-                    Professor Emeritus, Hawaii Pacific University, Honolulu <br /> Previous Advisor,
-                    South Korean Presidential Committee for Government Innovation
+                    Previous Advisor: South Korean Presidential Committee for Government Innovation,
+                    Alcatel Korea, SK Telecom, SK Hynix
                   </Text>
                 </Card>
               </Center>
