@@ -38,6 +38,30 @@ import { useMediaQuery } from '@mantine/hooks';
 import classes from './Welcome.module.css';
 import { theme } from '@/theme';
 
+import { collection, doc, addDoc, setDoc } from 'firebase/firestore';
+import { db } from '../../app/db';
+
+const sendFormSubmission = async (formContent: any) => {
+  // e.preventDefault();
+  console.log('about to try');
+
+  try {
+    const docRef = await addDoc(collection(db, 'interested-users'), {
+      ...formContent,
+    });
+    console.log('Document written with ID: ', docRef.id);
+  } catch (e) {
+    console.error('Error adding document: ', e);
+  }
+};
+
+const createDocRef = (form: any) =>
+  addDoc(collection(db, 'interested-users'), {
+    message: 'form.values.message there',
+    email: 'form.values.email there',
+    name: 'form.values.name there',
+  });
+
 interface CarouselCardProps {
   icon: string;
   title: string;
@@ -105,6 +129,7 @@ export function Welcome() {
     initialValues: {
       name: '',
       email: '',
+      message: '',
     },
     validate: {
       name: (value) => value.trim().length < 2,
@@ -152,8 +177,8 @@ export function Welcome() {
               from accessing the financial tools they need to advance in this country. Though they
               may have credit histories in their home countries, and be creditworthy people, they
               must start from scratch in the United States. <br /> <br />
-              Even for necessities -- like work equipment, car loans, etc -- immigrants often have
-              to look for co-signers because banks have no data to determine their creditworthiness.{' '}
+              Even for necessities — like work equipment, car loans, etc — immigrants often have to
+              look for co-signers because banks have no data to determine their creditworthiness.{' '}
               <br /> <br />
               This is where PulsaFi comes in.
             </Text>
@@ -260,7 +285,39 @@ export function Welcome() {
                   </Text>
                 </Text>
 
-                <form onSubmit={form.onSubmit(() => {})}>
+                <form
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+
+                    // createDocRef(form);
+
+                    addDoc(collection(db, 'interested-users'), {
+                      message: form.values.message,
+                      email: form.values.email,
+                      name: form.values.name,
+                    });
+
+                    console.log({
+                      message: form.values.message,
+                      email: form.values.email,
+                      name: form.values.name,
+                    });
+                    // const docRef = await addDoc(collection(db, 'interested-users'), {
+                    //   message: form.values.message,
+                    //   email: form.values.email,
+                    //   name: form.values.name,
+                    // }).then(() => console.log('in the end'));
+
+                    console.log('done');
+                    // console.log('Document written with ID: ', docRef.id);
+                    // try {
+
+                    // } catch (e) {
+                    //   console.error('Error adding document: ', e);
+                    // }
+                    // console.log('done');
+                  }}
+                >
                   <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
                     <TextInput
                       label="Name"
@@ -278,8 +335,20 @@ export function Welcome() {
                     />
                   </SimpleGrid>
 
+                  <Textarea
+                    mt="md"
+                    label="Message"
+                    placeholder="Let us know what you think!"
+                    maxRows={5}
+                    minRows={2}
+                    autosize
+                    name="message"
+                    variant="filled"
+                    {...form.getInputProps('message')}
+                  />
+
                   <Group justify="center" mt="xl" pb={25}>
-                    <Button color="purple" type="submit" size="md">
+                    <Button name="submit-button" color="purple" type="submit" size="md">
                       Submit
                     </Button>
                   </Group>
