@@ -122,7 +122,7 @@ export function Welcome() {
           variant="gradient"
           gradient={{ from: 'blue', to: 'purple' }}
         >
-          \O/ PulsaFi
+          PulsaFi
         </Text>
       </AppShell.Header>
       <AppShell.Main>
@@ -131,12 +131,12 @@ export function Welcome() {
             <Box pt={100} pb={125}>
               <Title className={classes.title} ta="center" pb={25}>
                 <Text inherit component="span">
-                  Obtain Credit With Nothing More Than A Bank Account
+                  Get Credit Using Just Your Bank Account — It's That Simple
                 </Text>
               </Title>
               <Text className={classes.subtitle} ta="center" mx="auto">
-                PulsaFi utilizes machine learning to generate credit-worthiness metrics based on
-                bank transactions and alternative data
+                PulsaFi utilizes machine learning to generate creditworthiness metrics based on bank
+                transactions and alternative data
               </Text>
             </Box>
           </Box>
@@ -150,11 +150,11 @@ export function Welcome() {
             <Text maw={1000} mx="auto" className={classes.stepCardBody}>
               When immigrants arrive in the United States, their immigrations status prevents them
               from accessing the financial tools they need to advance in this country. Though they
-              may have credit histories in their home countries, and be credit-worthy people, they
+              may have credit histories in their home countries, and be creditworthy people, they
               must start from scratch in the United States. <br /> <br />
               Even for necessities -- like work equipment, car loans, etc -- immigrants often have
-              to look for co-signers because banks have no data to determine their
-              credit-worthiness. <br /> <br />
+              to look for co-signers because banks have no data to determine their creditworthiness.{' '}
+              <br /> <br />
               This is where PulsaFi comes in.
             </Text>
           </Box>
@@ -185,11 +185,11 @@ export function Welcome() {
             <Text className={classes.logo} mb={25}>
               Who We Are
             </Text>
-            <SimpleGrid cols={{ base: 1, sm: 2 }}>
+            <SimpleGrid cols={{ base: 1, sm: 3 }}>
               <Center>
                 <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
                   <Card.Section>
-                    <Image src="/jesus.jpg" height={350} />
+                    <Image src="/zack.jpeg" height={350} />
                   </Card.Section>
 
                   <Text className={classes.cardTitle}>Zackery Atlas</Text>
@@ -218,6 +218,22 @@ export function Welcome() {
                     Machine Learning, Alpha Generation and ETF's At BlackRock
                   </Text>
                   <Text className={classes.bodyHighlighted}>jesus [at] pulsafi [dot] com</Text>
+                </Card>
+              </Center>
+
+              <Center>
+                <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
+                  <Card.Section>
+                    <Image src="/zack.jpeg" height={350} />
+                  </Card.Section>
+
+                  <Text className={classes.cardTitle}>Justin Gukhyun Cho, Ph.D.</Text>
+                  <Text className={classes.cardSubtitle}>Advisor</Text>
+                  <Text className={classes.bodyItalic}></Text>
+                  <Text className={classes.body}>
+                    Professor Emeritus, Hawaii Pacific University, Honolulu <br /> Previous Advisor,
+                    South Korean Presidential Committee for Government Innovation
+                  </Text>
                 </Card>
               </Center>
             </SimpleGrid>
