@@ -99,7 +99,7 @@ const carouselItems = [
 export function Welcome() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  const slides = carouselItems.map((item) => <CarouselCard {...item} />);
+  const slides = carouselItems.map((item) => <CarouselCard key={item.title} {...item} />);
 
   const form = useForm({
     initialValues: {
