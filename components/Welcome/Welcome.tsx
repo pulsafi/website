@@ -162,7 +162,7 @@ export function Welcome() {
               The Problem
             </Text>
             <Text maw={1000} mx="auto" className={classes.stepCardBody}>
-              When immigrants arrive in the United States, their immigrations status prevents them
+              When immigrants arrive in the United States, their immigration status prevents them
               from accessing the financial tools they need to advance in this country. Though they
               may have credit histories in their home countries, and be creditworthy people, they
               must start from scratch in the United States. <br /> <br />
@@ -209,7 +209,7 @@ export function Welcome() {
                     BS in Business Administration, UC Berkeley HAAS, 2025
                   </Text>
                   <Text className={classes.body}>6 years at JP Morgan Chase and Wells Fargo</Text>
-                  <Text className={classes.bodyHighlighted}>zack [at] pulsafi [dot] com</Text>
+                  {/* <Text className={classes.bodyHighlighted}>zack [at] pulsafi [dot] com</Text> */}
                 </Card>
               </Center>
 
@@ -228,7 +228,7 @@ export function Welcome() {
                   <Text className={classes.body}>
                     Machine Learning, Alpha Generation and ETF's At BlackRock
                   </Text>
-                  <Text className={classes.bodyHighlighted}>jesus [at] pulsafi [dot] com</Text>
+                  {/* <Text className={classes.bodyHighlighted}>jesus [at] pulsafi [dot] com</Text> */}
                 </Card>
               </Center>
 
