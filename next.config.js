@@ -3,7 +3,7 @@
  */
 const nextConfig = {
   output: 'export',
-  basePath: '',
+  basePath: '/website',
 
   //   images: {
   //     loader: 'akamai',
