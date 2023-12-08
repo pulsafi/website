@@ -216,7 +216,7 @@ export function Welcome() {
               <Center>
                 <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
                   <Card.Section>
-                    <Image src="/website/jesus.jpg" height={350} />
+                    <Image src="/website/jesus.JPG" height={350} />
                   </Card.Section>
 
                   <Text className={classes.cardTitle}>Jesus Villalobos</Text>
