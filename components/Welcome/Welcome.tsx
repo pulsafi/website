@@ -94,7 +94,7 @@ const carouselItems = [
     icon: '2.',
     title: 'Link Bank Account',
     caption:
-      'In order for PulsaFi to generate a creditworthiness score, at least one account must be linked. You may link as many accounts as you would like.',
+      'In order for PulsaFi to generate a creditworthiness score, at least one bank account must be linked. You may link as many accounts as you would like.',
   },
   {
     icon: '3.',
