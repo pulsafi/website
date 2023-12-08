@@ -18,5 +18,6 @@ module.exports = {
     'import/no-duplicates': 'off',
     'no-console': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'react/self-closing-comp': 'off',
   },
 };
