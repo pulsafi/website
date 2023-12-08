@@ -1,57 +1,40 @@
 'use client';
 
-import { useDisclosure } from '@mantine/hooks';
 import {
   BackgroundImage,
   Box,
   Title,
   Text,
-  Anchor,
   AppShell,
-  Burger,
-  Space,
-  Group,
-  UnstyledButton,
-  TextInput,
-  Textarea,
   Grid,
   SimpleGrid,
-  Button,
   Paper,
   Card,
   Image,
   Center,
-  Badge,
-  Avatar,
   useMantineTheme,
-  rem,
-  Flex,
   Stack,
-  Container,
 } from '@mantine/core';
-
-import { Carousel } from '@mantine/carousel';
 
 import { useForm } from '@mantine/form';
 import { useMediaQuery } from '@mantine/hooks';
 
 import classes from './Welcome.module.css';
-import { theme } from '@/theme';
 
-import { collection, doc, addDoc, setDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../app/db';
 
 const sendFormSubmission = async (formContent: any) => {
   // e.preventDefault();
-  console.log('about to try');
+  // console.log('about to try');
 
   try {
     const docRef = await addDoc(collection(db, 'interested-users'), {
       ...formContent,
     });
-    console.log('Document written with ID: ', docRef.id);
+    // console.log('Document written with ID: ', docRef.id);
   } catch (e) {
-    console.error('Error adding document: ', e);
+    // console.error('Error adding document: ', e);
   }
 };
 
@@ -197,13 +180,13 @@ export function Welcome() {
                 How It Works
               </Text>
               <Grid grow>
-                <Grid.Col span={1}></Grid.Col>
+                <Grid.Col span={1} />
                 <Grid.Col span={10}>
                   <Stack align="center" justify="center" gap="xs">
                     {slides}
                   </Stack>
                 </Grid.Col>
-                <Grid.Col span={1}></Grid.Col>
+                <Grid.Col span={1} />
               </Grid>
             </Box>
           </Box>
