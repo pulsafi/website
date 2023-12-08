@@ -74,13 +74,20 @@ function CarouselCard({ icon, title, caption }: CarouselCardProps) {
       withBorder
       shadow="md"
       px={15}
-      py={10}
+      py={15}
       maw={800}
       // my={15}
       radius="lg"
       className={classes.carouselCard}
     >
-      <Text ta="center" mx="auto">
+      <Text
+        className={classes.logoWhite}
+        ta="center"
+        mx="auto"
+        component="span"
+        variant="gradient"
+        gradient={{ from: 'blue', to: 'purple' }}
+      >
         {icon}
       </Text>
       <Text ta="center" mx="auto" className={classes.stepCardTitle}>
@@ -95,25 +102,25 @@ function CarouselCard({ icon, title, caption }: CarouselCardProps) {
 
 const carouselItems = [
   {
-    icon: 'step1-icon',
+    icon: '1.',
     title: 'Access PulsaFi via Mobile App or Website',
     caption:
       'Our application will be identical across all iOS, Android, and Mac devices, as well as any web browser.',
   },
   {
-    icon: 'step2-icon',
+    icon: '2.',
     title: 'Link Bank Account',
     caption:
       'In order for PulsaFi to generate a creditworthiness score, at least one account must be linked. You may link as many accounts as you would like.',
   },
   {
-    icon: 'step3-icon',
+    icon: '3.',
     title: 'Analyze Transations',
     caption:
       'This is where PulsaFi works its magic. We will analyze your transaction data with robust machine learning and give you a score.',
   },
   {
-    icon: 'step4-icon',
+    icon: '4.',
     title: 'Apply For Credit Products',
     caption:
       'After receiving your score, you will be able to apply to credit products of your choice!',
@@ -166,7 +173,6 @@ export function Welcome() {
             </Box>
           </Box>
         </BackgroundImage>
-
         <Box className={classes.darkBox}>
           <Box pt={50} pb={50}>
             <Text className={classes.logo} mb={25}>
@@ -184,7 +190,6 @@ export function Welcome() {
             </Text>
           </Box>
         </Box>
-
         <BackgroundImage src="/wave4.svg">
           <Box className={classes.lightBox}>
             <Box pt={50} pb={50}>
@@ -203,8 +208,6 @@ export function Welcome() {
             </Box>
           </Box>
         </BackgroundImage>
-
-        {/* <BackgroundImage src="/wave5.svg"> */}
         <Box className={classes.darkBox}>
           <Box pt={50} pb={50}>
             <Text className={classes.logo} mb={25}>
@@ -249,7 +252,7 @@ export function Welcome() {
               <Center>
                 <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
                   <Card.Section>
-                    <Image src="/zack.jpeg" height={350} />
+                    <Image src="/justin.jpg" height={350} />
                   </Card.Section>
 
                   <Text className={classes.cardTitle}>Justin Gukhyun Cho, Ph.D.</Text>
@@ -266,8 +269,6 @@ export function Welcome() {
             </SimpleGrid>
           </Box>
         </Box>
-        {/* </BackgroundImage> */}
-
         <BackgroundImage src="/wave2.svg">
           <Box className={classes.lightBox}>
             <Box pt={50} pb={50}>
@@ -277,93 +278,55 @@ export function Welcome() {
                 </Text>
 
                 <Text ta="center" pt={25}>
-                  Send us an email at or leave us yours, and we'll keep you updated on PulsaFi's
-                  development! <br />
+                  Send us an email and we'll keep you updated on PulsaFi's development! <br />
                   <br /> Reach us at:{' '}
                   <Text span className={classes.highlighted}>
                     dev [at] pulsafi [dot] com
                   </Text>
                 </Text>
-
-                <form
-                  onSubmit={async (e) => {
-                    e.preventDefault();
-
-                    // createDocRef(form);
-
-                    addDoc(collection(db, 'interested-users'), {
-                      message: form.values.message,
-                      email: form.values.email,
-                      name: form.values.name,
-                    });
-
-                    console.log({
-                      message: form.values.message,
-                      email: form.values.email,
-                      name: form.values.name,
-                    });
-                    // const docRef = await addDoc(collection(db, 'interested-users'), {
-                    //   message: form.values.message,
-                    //   email: form.values.email,
-                    //   name: form.values.name,
-                    // }).then(() => console.log('in the end'));
-
-                    console.log('done');
-                    // console.log('Document written with ID: ', docRef.id);
-                    // try {
-
-                    // } catch (e) {
-                    //   console.error('Error adding document: ', e);
-                    // }
-                    // console.log('done');
-                  }}
-                >
-                  <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
-                    <TextInput
-                      label="Name"
-                      placeholder="Your name"
-                      name="name"
-                      variant="filled"
-                      {...form.getInputProps('name')}
-                    />
-                    <TextInput
-                      label="Email"
-                      placeholder="Your email"
-                      name="email"
-                      variant="filled"
-                      {...form.getInputProps('email')}
-                    />
-                  </SimpleGrid>
-
-                  <Textarea
-                    mt="md"
-                    label="Message"
-                    placeholder="Let us know what you think!"
-                    maxRows={5}
-                    minRows={2}
-                    autosize
-                    name="message"
-                    variant="filled"
-                    {...form.getInputProps('message')}
-                  />
-
-                  <Group justify="center" mt="xl" pb={25}>
-                    <Button name="submit-button" color="purple" type="submit" size="md">
-                      Submit
-                    </Button>
-                  </Group>
-                </form>
               </Paper>
             </Box>
           </Box>
         </BackgroundImage>
 
-        {/* <a href="https://www.freepik.com/free-vector/blue-neon-synthewave-patterned-background-vector_34101053.htm#page=2&query=finance%20dark%20purple&position=7&from_view=search&track=ais&uuid=bb204f72-646c-409c-8386-122859166551">Image by rawpixel.com</a> on Freepik */}
-        {/* <a href="https://www.freepik.com/free-vector/stylish-blue-wavy-lines-abstract-background-design_34386344.htm#page=2&query=finance%20dark%20purple&position=1&from_view=search&track=ais&uuid=8eb6436c-4a1b-4d90-bde2-d32414f527a3">Image by flatart</a> on Freepik */}
-        {/* <a href="https://www.freepik.com/free-vector/colorful-shiny-wave-with-lines-curved-wavy-line-smooth-stripe-design-element_34386256.htm#query=purple%20lines%20black%20background&position=48&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e">Image by flatart</a> on Freepik */}
-        {/* <a href="https://www.freepik.com/free-vector/abstract-blue-color-technology-line-wave-background_34386093.htm#query=purple%20lines%20black%20background&position=31&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e">Image by flatart</a> on Freepik */}
-        {/* <a href="https://www.freepik.com/free-vector/creative-line-art-vector-illustration-eps-10-design-elements-created-using-blend-tool_34385550.htm#query=purple%20lines%20black%20background&position=27&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e">Image by flatart</a> on Freepik */}
-        {/* <a href="https://www.freepik.com/free-vector/creative-line-art-vector-illustration-eps-10-design-elements-created-using-blend-tool_34386059.htm#query=purple%20lines%20black%20background&position=40&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e">Image by flatart</a> on Freepik */}
+        <Box className={classes.darkBox} ta="center">
+          <a
+            className={classes.imageAttribution}
+            href="https://www.freepik.com/free-vector/blue-neon-synthewave-patterned-background-vector_34101053.htm#page=2&query=finance%20dark%20purple&position=7&from_view=search&track=ais&uuid=bb204f72-646c-409c-8386-122859166551"
+          >
+            Image by rawpixel.com on Freepik
+          </a>{' '}
+          <a
+            className={classes.imageAttribution}
+            href="https://www.freepik.com/free-vector/stylish-blue-wavy-lines-abstract-background-design_34386344.htm#page=2&query=finance%20dark%20purple&position=1&from_view=search&track=ais&uuid=8eb6436c-4a1b-4d90-bde2-d32414f527a3"
+          >
+            Image by flatart on Freepik
+          </a>{' '}
+          <a
+            className={classes.imageAttribution}
+            href="https://www.freepik.com/free-vector/colorful-shiny-wave-with-lines-curved-wavy-line-smooth-stripe-design-element_34386256.htm#query=purple%20lines%20black%20background&position=48&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e"
+          >
+            Image by flatart on Freepik
+          </a>{' '}
+          <a
+            className={classes.imageAttribution}
+            href="https://www.freepik.com/free-vector/abstract-blue-color-technology-line-wave-background_34386093.htm#query=purple%20lines%20black%20background&position=31&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e"
+          >
+            Image by flatart on Freepik
+          </a>{' '}
+          <a
+            className={classes.imageAttribution}
+            href="https://www.freepik.com/free-vector/creative-line-art-vector-illustration-eps-10-design-elements-created-using-blend-tool_34385550.htm#query=purple%20lines%20black%20background&position=27&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e"
+          >
+            Image by flatart on Freepik
+          </a>{' '}
+          <a
+            className={classes.imageAttribution}
+            href="https://www.freepik.com/free-vector/creative-line-art-vector-illustration-eps-10-design-elements-created-using-blend-tool_34386059.htm#query=purple%20lines%20black%20background&position=40&from_view=search&track=ais&uuid=f4b6d5a4-3170-437a-af23-fe4643ed057e"
+          >
+            Image by flatart on Freepik
+          </a>{' '}
+        </Box>
       </AppShell.Main>
     </AppShell>
   );

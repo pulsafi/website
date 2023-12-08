@@ -34,6 +34,24 @@
   }
 }
 
+.stepNumber {
+  color: var(--mantine-color-white);
+  font-size: rem(55px);
+  font-weight: 900;
+  letter-spacing: rem(-1px);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(45px);
+  }
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(35px);
+  }
+}
+
 .header {
   background-color: light-dark(var(--mantine-color-white), #000422);
 }
@@ -187,6 +205,18 @@
 
 .highlighted {
   color: var(--mantine-color-grape-6);
+}
+
+.imageAttribution {
+  color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  font-size: rem(8px);
+  font-weight: 200;
+  letter-spacing: rem(0px);
+  padding-top: 0px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(4px);
+  }
 }
 
 .darkBox {
