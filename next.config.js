@@ -5,6 +5,12 @@ const nextConfig = {
   output: 'export',
   basePath: '/website',
 
+  //   images: {
+  //     loader: 'akamai',
+  //     path: '',
+  //   },
+  //   assetPrefix: './',
+
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
 
