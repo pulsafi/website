@@ -141,7 +141,7 @@ export function Welcome() {
         </Text>
       </AppShell.Header>
       <AppShell.Main>
-        <BackgroundImage src="/website/wave5.svg">
+        <BackgroundImage src="/wave5.svg">
           <Box className={classes.lightBox}>
             <Box pt={100} pb={125}>
               <Title className={classes.title} ta="center" pb={25}>
@@ -173,7 +173,7 @@ export function Welcome() {
             </Text>
           </Box>
         </Box>
-        <BackgroundImage src="/website/wave4.svg">
+        <BackgroundImage src="/wave4.svg">
           <Box className={classes.lightBox}>
             <Box pt={50} pb={50}>
               <Text className={classes.logoWhite} mb={25}>
@@ -200,7 +200,7 @@ export function Welcome() {
               <Center>
                 <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
                   <Card.Section>
-                    <Image src="/website/zack.jpeg" height={350} />
+                    <Image src="/zack.jpeg" height={350} />
                   </Card.Section>
 
                   <Text className={classes.cardTitle}>Zackery Atlas</Text>
@@ -216,7 +216,7 @@ export function Welcome() {
               <Center>
                 <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
                   <Card.Section>
-                    <Image src="/website/jesus.JPG" height={350} />
+                    <Image src="/jesus.JPG" height={350} />
                   </Card.Section>
 
                   <Text className={classes.cardTitle}>Jesus Villalobos</Text>
@@ -235,7 +235,7 @@ export function Welcome() {
               <Center>
                 <Card className={classes.card} shadow="lg" padding="lg" radius="md" withBorder>
                   <Card.Section>
-                    <Image src="/website/justin.jpg" height={350} />
+                    <Image src="/justin.jpg" height={350} />
                   </Card.Section>
 
                   <Text className={classes.cardTitle}>Justin Gukhyun Cho, Ph.D.</Text>
@@ -252,7 +252,7 @@ export function Welcome() {
             </SimpleGrid>
           </Box>
         </Box>
-        <BackgroundImage src="/website/wave2.svg">
+        <BackgroundImage src="/wave2.svg">
           <Box className={classes.lightBox}>
             <Box pt={50} pb={50}>
               <Paper shadow="xl" withBorder p="xl" maw={800} mx="auto">
