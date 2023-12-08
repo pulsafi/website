@@ -211,7 +211,11 @@ export function Welcome() {
                   </Text>
                   <Text className={classes.body}>6 years at JP Morgan Chase and Wells Fargo</Text>
                   <Text className={classes.bodyHighlighted}>
-                    <Anchor href="https://www.linkedin.com/in/zackeryatlas/" target="_blank">
+                    <Anchor
+                      className={classes.bodyHighlighted}
+                      href="https://www.linkedin.com/in/zackeryatlas/"
+                      target="_blank"
+                    >
                       LinkedIn
                     </Anchor>
                   </Text>
@@ -234,7 +238,11 @@ export function Welcome() {
                     Machine Learning, Alpha Generation and ETF's At BlackRock
                   </Text>
                   <Text className={classes.bodyHighlighted}>
-                    <Anchor href="https://linkedin.com/in/j-villalobos/" target="_blank">
+                    <Anchor
+                      className={classes.bodyHighlighted}
+                      href="https://linkedin.com/in/j-villalobos/"
+                      target="_blank"
+                    >
                       LinkedIn
                     </Anchor>
                   </Text>
