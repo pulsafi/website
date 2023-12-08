@@ -14,6 +14,7 @@ import {
   Center,
   useMantineTheme,
   Stack,
+  Anchor,
 } from '@mantine/core';
 
 import { useForm } from '@mantine/form';
@@ -209,7 +210,11 @@ export function Welcome() {
                     BS in Business Administration, UC Berkeley HAAS, 2025
                   </Text>
                   <Text className={classes.body}>6 years at JP Morgan Chase and Wells Fargo</Text>
-                  {/* <Text className={classes.bodyHighlighted}>zack [at] pulsafi [dot] com</Text> */}
+                  <Text className={classes.bodyHighlighted}>
+                    <Anchor href="https://www.linkedin.com/in/zackeryatlas/" target="_blank">
+                      LinkedIn
+                    </Anchor>
+                  </Text>
                 </Card>
               </Center>
 
@@ -228,7 +233,11 @@ export function Welcome() {
                   <Text className={classes.body}>
                     Machine Learning, Alpha Generation and ETF's At BlackRock
                   </Text>
-                  {/* <Text className={classes.bodyHighlighted}>jesus [at] pulsafi [dot] com</Text> */}
+                  <Text className={classes.bodyHighlighted}>
+                    <Anchor href="https://linkedin.com/in/j-villalobos/" target="_blank">
+                      LinkedIn
+                    </Anchor>
+                  </Text>
                 </Card>
               </Center>
 
